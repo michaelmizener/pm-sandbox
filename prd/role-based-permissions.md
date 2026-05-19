@@ -29,7 +29,7 @@ Customer evidence: 6 of our top 20 accounts have requested this in the past 90 d
 
 - Custom/user-defined roles (v2 consideration)
 - Row-level security within a launch (e.g., hiding specific checklist items)
-- API key scoping (separate security initiative)
+- API key scoping — no changes to read-only token access in this release (separate security initiative)
 
 ---
 
@@ -71,9 +71,11 @@ Customer evidence: 6 of our top 20 accounts have requested this in the past 90 d
 
 ## Open Questions
 
-- [ ] Should Editors be able to invite new Viewers? (currently no)
-- [ ] What happens when a private launch is shared via a public link?
-- [ ] How do we handle API access for read-only tokens?
+- [x] Should Editors be able to invite new Viewers? **No — only Admins can invite members.**
+- [x] What happens when a private launch is shared via a public link? **The launch requires authentication. Two cases:**
+  - **Not logged in:** redirect to login, then return to the launch URL (or show the error message post-auth if access is still denied)
+  - **Logged in but no access:** show inline message: "You do not have access to view this page. If you believe you should have access to view this page, please reach out to your Admin."
+- [x] How do we handle API access for read-only tokens? **Out of scope — no changes to API access in this release.**
 
 ---
 
