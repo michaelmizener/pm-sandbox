@@ -89,8 +89,24 @@ Customer evidence: 6 of our top 20 accounts have requested this in the past 90 d
 
 ---
 
+## Timeline
+
+Target GA: week of June 23, 2026. **Infra ticket #52 is the critical path — if it slips past June 6, the release date moves.**
+
+| Milestone | Date | Owner | Notes |
+|---|---|---|---|
+| PRD finalized & eng kickoff | May 23 | Michael | Resolve any remaining eng questions |
+| Infra: JWT role claims complete (ticket #52) | June 6 | Infra team | Blocker for all frontend work |
+| Frontend permission guards complete | June 11 | Dev team | 3-day estimate; starts after #52 |
+| Admin UI complete | June 13 | Dev team | 4-day estimate; can run in parallel with guards |
+| QA & bug fix window | June 16–20 | QA + Dev | Internal testing, edge case coverage |
+| Staged rollout (beta accounts) | June 23 | Michael + Dev | Roll out to 5 named accounts first |
+| GA | June 30 | Michael | Full release to all orgs |
+
+---
+
 ## Dependencies
 
-- Auth service must support role claims in JWT tokens (infra ticket #52)
+- Auth service must support role claims in JWT tokens (infra ticket #52) — **blocks all frontend work; must be complete by June 6**
 - Frontend permission guards (eng estimate: 3 days)
 - Admin UI for role management (eng estimate: 4 days)
