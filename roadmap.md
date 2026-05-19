@@ -14,6 +14,7 @@ _Last updated: 2026-05-19_
 
 | Feature | Status | Owner | Notes |
 |---|---|---|---|
+| Sort launches by launch date | Backlog | TBD | Issue #4; ascending & descending |
 | Launch analytics dashboard | Backlog | TBD | Needs data warehouse access |
 | Email digest (weekly summary) | Backlog | TBD | Low effort, high signal |
 | Salesforce CRM sync | Exploring | @partnerships | Depends on Q3 partner deal |
